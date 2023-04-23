@@ -14,13 +14,11 @@ public class Console {
 	}
 
 	public static String getString() {
-    Console.print(" Insert a word\n > ");
 		String word = scanner.nextLine();
 		return word;
 	}
 
 	public static char getChar() {
-    Console.print(" Insert a letter\n > ");
     String temp = "";
     try {
       temp = scanner.nextLine();
@@ -32,20 +30,16 @@ public class Console {
 	}
 
 	public static int getInt(int min, int max) {
-    Console.print("\n Insert a number\n > ");
 		int number = min - 1;
 		String temp;
 		while (number < min || number > max) {
 			try {
 				temp = scanner.nextLine();
 				number = Integer.parseInt(temp);
-			} catch (NumberFormatException ex) {
-				Console.print("\n A number please\n > ");
 			} catch (Exception ex) {
         Console.println(" Error");
       }
 		}
 		return number;
 	}
-
 }
